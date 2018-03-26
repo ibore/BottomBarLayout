@@ -81,12 +81,12 @@ public class BottomBarItem extends LinearLayout {
         mIconSelectedResourceId = ta.getResourceId(R.styleable.BottomBarItem_bbIconSelected, -1);
 
         mText = ta.getString(R.styleable.BottomBarItem_bbItemText);
-        mTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbItemTextSize, Utils.sp2px(mContext, mTextSize));
+        mTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbItemTextSize, sp2px(mContext, mTextSize));
 
         mTextColorNormal = ta.getColor(R.styleable.BottomBarItem_bbTextColorNormal, mTextColorNormal);
         mTextColorSelected = ta.getColor(R.styleable.BottomBarItem_bbTextColorSelected, mTextColorSelected);
 
-        mMarginTop = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbItemMarginTop, Utils.dip2Px(mContext, mMarginTop));
+        mMarginTop = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbItemMarginTop, dip2Px(mContext, mMarginTop));
 
         mOpenTouchBg = ta.getBoolean(R.styleable.BottomBarItem_bbOpenTouchBg, mOpenTouchBg);
         mTouchDrawable = ta.getDrawable(R.styleable.BottomBarItem_bbTouchDrawable);
@@ -95,11 +95,11 @@ public class BottomBarItem extends LinearLayout {
         mIconHeight = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbIconHeight, 0);
         mItemPadding = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbItemPadding, 0);
 
-        mUnreadTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbUnreadTextSize, Utils.sp2px(mContext, mUnreadTextSize));
+        mUnreadTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbUnreadTextSize, sp2px(mContext, mUnreadTextSize));
         mUnreadTextColor = ta.getColor(R.styleable.BottomBarItem_bbUnreadTextColor, 0xFFFFFFFF);
         mUnreadTextBg = ta.getDrawable(R.styleable.BottomBarItem_bbUnreadTextBg);
 
-        mMsgTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbMsgTextSize, Utils.sp2px(mContext, mMsgTextSize));
+        mMsgTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_bbMsgTextSize, sp2px(mContext, mMsgTextSize));
         mMsgTextColor = ta.getColor(R.styleable.BottomBarItem_bbMsgTextColor, 0xFFFFFFFF);
         mMsgTextBg = ta.getDrawable(R.styleable.BottomBarItem_bbMsgTextBg);
 
@@ -268,5 +268,16 @@ public class BottomBarItem extends LinearLayout {
 
     public void hideNotify() {
         mTvNotify.setVisibility(GONE);
+    }
+
+    private int dip2Px(Context context, int dip) {
+        float density = context.getResources().getDisplayMetrics().density;
+        int px = (int) (dip * density + 0.5f);
+        return px;
+    }
+
+    private int sp2px(Context context,float spValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
     }
 }

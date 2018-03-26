@@ -10,7 +10,7 @@ publish {
     userOrg = 'ibore'
     groupId = 'me.ibore.widget'
     artifactId = 'bottombar'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'BottomBarLayout'
     website = 'https://github.com/ibore/bottombarlayout'
 }
