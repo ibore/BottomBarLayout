@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomBarItem">
+        <!--默认状态下的图标-->
+        <attr name="bbIconNormal" format="reference"/>
+        <!--选中状态下的图标-->
+        <attr name="bbIconSelected" format="reference"/>
+        <!--底部文字-->
+        <attr name="bbItemText" format="string"/>
+        <!--文字大小-->
+        <attr name="bbItemTextSize" format="dimension"/>
+        <!--默认状态下的文字颜色-->
+        <attr name="bbTextColorNormal" format="color"/>
+        <!--选中状态下的文字颜色-->
+        <attr name="bbTextColorSelected" format="color"/>
+
+        <!--文字和图标的顶部距离-->
+        <attr name="bbItemMarginTop" format="dimension"/>
+
+        <!--是否开启触摸背景效果-->
+        <attr name="bbOpenTouchBg" format="boolean"/>
+        <!--设置触摸背景-->
+        <attr name="bbTouchDrawable" format="reference"/>
+
+        <!--设置图标的宽度-->
+        <attr name="bbIconWidth" format="dimension"/>
+        <!--设置图标的高度-->
+        <attr name="bbIconHeight" format="dimension"/>
+
+        <!--设置BottomBarItem的padding-->
+        <attr name="bbItemPadding" format="dimension"/>
+
+        <!--设置未读数字体大小-->
+        <attr name="bbUnreadTextSize" format="dimension"/>
+        <!--设置未读数字体颜色-->
+        <attr name="bbUnreadTextColor" format="reference"/>
+        <!--设置未读数背景色-->
+        <attr name="bbUnreadTextBg" format="reference"/>
+
+        <!--设置提示消息字体大小-->
+        <attr name="bbMsgTextSize" format="dimension"/>
+        <!--设置提示消息字体颜色-->
+        <attr name="bbMsgTextColor" format="reference"/>
+        <!--设置提示消息背景-->
+        <attr name="bbMsgTextBg" format="reference"/>
+
+        <!--设置提示点背景-->
+        <attr name="bbNotifyPointBg" format="reference"/>
+
+        <!--设置未读数组阈值 大于阈值的数字将显示为 n+ n为设置的阈值-->
+        <attr name="bbUnreadThreshold" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomBarLayout">
+        <attr name="bbSmoothScroll" format="boolean"/>
+    </declare-styleable>
+
+</resources>
